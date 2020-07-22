@@ -564,7 +564,7 @@ dobuild()
             echo "Building LHAPDF in $PWD..."
             LHAINST=`pwd`
             echo "LHAPDF install directory is $LHAINST..."
-            getcode $LHAPDFSRC "http://www.hepforge.org/archive/lhapdf"
+            getcode $LHAPDFSRC "http://www.hepforge.org/archive/lhapdf/old"
             mypush $LHAPDFDIR
             echo "Running configure in $PWD..."
             exec_package_comm "$NICE ./configure --prefix=$LHAINST --disable-old-ccwrap --disable-pyext" "log_${BUILDSTARTTIME}.config"
