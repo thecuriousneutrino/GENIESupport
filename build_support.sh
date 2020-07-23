@@ -639,9 +639,12 @@ dobuild()
             echo " ROOMU_SYS is $ROOMU_SYS..."
             export ROOMU_SYS=$ROOMU_SYS
             export PATH=$ROOMU_SYS/bin:$PATH
-            # to build RooMUHistos, ROOT env.var. need to be explicitly set 
+            echo " PATH is $PATH..."
+            # to build RooMUHistos, ROOT env.var. need to be explicitly set
+            echo " ROOTSYS is $ROOTSYS..."
             export ROOTSYS=$ROOTSYS
             export LD_LIBRARY_PATH=${ROOTSYS}/lib:$LD_LIBRARY_PATH
+            echo " LD_LIBRARY_PATH is $LD_LIBRARY_PATH..."
             mypush PlotUtils
             echo "Building PlotUtils in $PWD..."
             # $NICE $MAKE >& log_${BUILDSTARTTIME}.make
